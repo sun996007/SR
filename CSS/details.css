@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --dark-brown: #352607;
+  --muted-brown: #7A6A4C;
+  --card-gray: #f2f2f2;
+  --bright-yellow: #e9f029;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 280px;
+  color: var(--dark-brown);
+  background: #fff;
+  font-family: "Nunito", "Trebuchet MS", Arial, sans-serif;
+}
+
+
+.search-page {
+  max-width: 597px;
+  margin: 0 auto;
+  padding: 0 36px 140px;
+}
+.search-header {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}   
+.driver-photo {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+.driver-info { 
+    flex: 1; 
+    min-width: 0; }
+
+.driver-name { 
+    font-size: 21px; 
+    font-weight: 900; 
+    white-space: nowrap;
+ }
+
+.driver-info p {
+     color: var(--muted-brown);
+      margin: 0; 
+      font-size: 17px; 
+      white-space: nowrap; 
+    
+    }
+
+.verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
+    background: var(--bright-yellow);
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.license-plate {
+    padding: 5px 12px;
+    border: 2px solid #e6ddc9;
+    border-radius: 12px;
+    background: white;
+    font-size: 18px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.message-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 51px;
+    height: 51px;
+    border-radius: 50%;
+    border: 1px solid #e6ddc9;
+    background: white;
+}
+
+.chat-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #302b4e;
+    border-radius: 6px;
+    width: 24px;
+    height: 21px;
+    color: #302b4e;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.chat-symbol::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+    border-top: 5px solid #302b4e;
+    border-right: 5px solid transparent;
+}
+.ride-members {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    font-size: 14px;
+    color: var(--muted-brown);
+}
+.members-icons { 
+    letter-spacing: -3px; 
+    font-size: 21px; 
+}
+
+
+.booking-bottom {
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 527px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.calendar-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: var(--bright-yellow);
+    border: 1.7px solid var(--dark-brown);
+    border-radius: 50px;
+    width: 100%;
+    height: 60px;
+    font-size: 19px;
+    font-weight: 900;
+}
+.small-calendar {
+     width: 17px; 
+     height: 17px; 
+     transform: scale(.78);
+    
+    }
+
+.cancel-booking { 
+    color: #d44b3f; 
+    font-size: 15px;
+     margin: 0; }
+
+
+.arrow1 {
+  text-decoration: none;
+  color: #302b4e;
+  font-size: 30px;
+  line-height: 1;
+}
+.bell { width: 28px; height: 28px; object-fit: contain; }
+
+.booked {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 5px 13px;
+  border-radius: 50px;
+  background-color: var(--bright-yellow);
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+.check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--dark-brown);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+.booking-time {
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 900;
+  margin: 12px 0 13px;
+}
+.booking-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted-brown);
+  font-size: 21px;
+  margin-bottom: 27px;
+}
+
+.route-card {
+  position: relative;
+  width: 100%;
+  min-height: 205px;
+  background: var(--card-gray);
+  border-radius: 26px;
+  padding: 25px 20px;
+  margin-bottom: 24px;
+}
+.route-point {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 20px minmax(0, 1fr);
+  gap: 13px;
+  align-items: start;
+  min-height: 100px;
+}
+.route-point.destination-point { 
+    min-height: 0; 
+    align-items: center;
+ }
+
+.route-time { 
+    font-size: 22px; 
+    font-weight: 900; 
+    line-height: 1.5;
+
+}
+
+.start {
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--dark-brown);
+  border-radius: 50%;
+  margin-top: 10px;
+  z-index: 1;
+  background: var(--card-gray);
+}
+
+.end {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: var(--dark-brown);
+  z-index: 1;
+}
+
+.route-line {
+  position: absolute;
+  top: 62px;
+  bottom: 47px;
+  left: 110px;
+  width: 3px;
+  background-color: #e6ddc9;
+}
+
+.location-info h2 {
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.arrival-note {
+  display: inline-block;
+  border-radius: 50px;
+  background: #efebff;
+  color: #6552bf;
+  font-size: 16px;
+  padding: 7px 12px;
+  margin-top: 7px;
+}
+.route-action {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  padding: 10px 13px;
+  background-color: white;
+  border: 1.8px solid var(--dark-brown);
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+.route-card > .route-point:not(.destination-point) .location-info { padding-right: 100px; }
+
+.driver-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 106px;
+  background: var(--card-gray);
+  border-radius: 26px;
+  padding: 18px 18px;
+}
+
+
+.calendar-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    height: 70px;
+
+    background-color: #e9f029;
+    border: 2px solid #352607;
+    border-radius: 50px;
+
+    color: #352607;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.calendar-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.floating-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(455px, 100%);
+    z-index: 100;
+}
+
+.floating-nav img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-link {
+    position: absolute;
+    left: 7%;
+    top: 18%;
+    width: 22%;
+    height: 65%;
+}
+
+.post-link {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    width: 21%;
+    height: 65%;
+}

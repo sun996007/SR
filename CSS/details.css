@@ -13,9 +13,13 @@ body {
   min-width: 280px;
   color: var(--dark-brown);
   background: #fff;
-  font-family: "Nunito", "Trebuchet MS", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
 }
 
+
+button, input, select, textarea {
+  font-family: inherit;
+}
 
 .search-page {
   max-width: 597px;
@@ -354,6 +358,13 @@ body {
     width: 22%;
     height: 65%;
 }
+
+.find-link {
+    position: absolute;
+    left: 30%;
+    top: 18%;
+    width: 22%;
+    height: 65%;}
 
 .post-link {
     position: absolute;

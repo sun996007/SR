@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   --muted-brown: #7A6A4C;
@@ -11,8 +12,13 @@ body {
   min-width: 280px;
   color: var(--dark-brown);
   background: #fff;
+  font-family: "Nunito", Arial, sans-serif;
 }
 
+
+button, input, select, textarea {
+  font-family: inherit;
+}
 
 .title {
   width: min(100%, 591px);
@@ -161,6 +167,13 @@ h1 {
     width: 22%;
     height: 65%;
 }
+
+.find-link {
+    position: absolute;
+    left: 30%;
+    top: 18%;
+    width: 22%;
+    height: 65%;}
 
 .post-link {
     position: absolute;
@@ -393,7 +406,7 @@ h1 {
   border-radius: 50%;
   color: var(--dark-brown);
   background: #e8f522;
-  font: 900 10px/1 Arial, sans-serif;
+  font: 900 10px/1 "Nunito", Arial, sans-serif;
 }
 
 .rating { margin-left: -2px; }
